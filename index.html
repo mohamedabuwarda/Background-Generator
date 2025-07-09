@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="copyright" content="Mohammed Abu Warda - 2025">
+</head>
+<body>
+    <div class="background-container">
+        <div class="gradient-bg"></div>
+        <div class="pattern-overlay" data-pattern="dots"></div>
+    </div>
+
+    <div class="content">
+        <h1>Background Generator</h1>
+        <p class="description">Create beautiful gradient backgrounds with custom patterns. Choose from various styles and customize them as you like.</p>
+        
+        <div class="control-panel">
+            <div class="color-pickers">
+                <div class="color-picker">
+                    <label for="color1">Primary Color</label>
+                    <input type="color" id="color1" value="#3498db">
+                </div>
+                <div class="color-picker">
+                    <label for="color2">Secondary Color</label>
+                    <input type="color" id="color2" value="#2ecc71">
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label for="angle">Gradient Angle: <span id="angle-value">135</span>°</label>
+                <input type="range" id="angle" min="0" max="360" value="135">
+            </div>
+
+            <div class="control-group">
+                <label>Pattern Style</label>
+                <div class="pattern-options">
+                    <div class="pattern-option active" data-pattern="dots">
+                        <span class="pattern-option-label">Dots</span>
+                    </div>
+                    <div class="pattern-option" data-pattern="lines">
+                        <span class="pattern-option-label">Lines</span>
+                    </div>
+                    <div class="pattern-option" data-pattern="waves">
+                        <span class="pattern-option-label">Waves</span>
+                    </div>
+                    <div class="pattern-option" data-pattern="grid">
+                        <span class="pattern-option-label">Grid</span>
+                    </div>
+                    <div class="pattern-option" data-pattern="zigzag">
+                        <span class="pattern-option-label">Zigzag</span>
+                    </div>
+                    <div class="pattern-option" data-pattern="hexagons">
+                        <span class="pattern-option-label">Hexagons</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label for="pattern-size">Pattern Size: <span id="pattern-size-value">100</span>px</label>
+                <input type="range" id="pattern-size" min="20" max="200" value="100">
+            </div>
+
+            <div class="control-group">
+                <label for="pattern-opacity">Pattern Opacity: <span id="pattern-opacity-value">70</span>%</label>
+                <input type="range" id="pattern-opacity" min="0" max="100" value="70">
+            </div>
+
+            <div class="buttons">
+                <button class="btn-primary" id="randomize">Randomize</button>
+                <button class="btn-secondary" id="copy-css">Copy CSS</button>
+            </div>
+
+            <div class="css-output" id="css-output">
+                /* CSS will appear here */
+            </div>
+        </div>
+    </div>
+
+    <footer class="copyright">
+        &copy; Mohammed Abu Warda - 2025
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
